@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- code by webdevtrick (https://webdevtrick.com) -->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link rel="stylesheet" type="text/css" href="quiz.css">
+</head>
+
+<body>
+    <header style="margin-top:10px;">
+        <img src="logo.png" /> <br/>
+        <h1> TickQUIZ </h1>
+    </header>
+
+    <div class="menuBar">
+        <a href="">Home</a>
+        <div class="dropdown">
+            <button class="dropButton">Subjects 
+            </button>
+            <div class="dropdownContent">
+                <a href="">Subject 1</a>
+                <a href="">Subject 2</a>
+                <a href="">Sucject 3</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropButton">Scoreboard 
+            </button>
+            <div class="dropdownContent">
+                <a href="">Subject 1</a>
+                <a href="">Subject 2</a>
+                <a href="">Sucject 3</a>
+            </div>
+        </div>
+        <a href="">Info</a>
+    </div>
+
+    <div class="contain">
+        <div id="container">
+                <div id="QuestionContainer" , style="display:block;">
+                    
+                    <h2 style="margin-left:30px" id="questionNum"></h2>
+                    
+                    <div id="question">
+    
+                    </div>
+    
+                    <div id="answerContainer">
+                        <button value="0" id="button0" name="answer" class="aButton">
+                                <label id="label0" class="label"></label>
+                            </button>
+    
+                        <button value="1" id="button1" name="answer" class="aButton">
+                                <label id="label1" class="label"></label>
+                            </button>
+    
+                        <button value="2" id="button2" name="answer" class="aButton">	
+                                <label id="label2" class="label"></label>
+                            </button>
+    
+                        <button value="3" id="button3" name="answer" class="aButton">
+                                <label id="label3" class="label"></label>
+                            </button>
+    
+                    </div>
+    
+                </div>
+            
+
+            <div id="backButton" style="display:inline-block;"> 
+                <button id="back" class="navButton" value="back" onclick="moveTo(this.value)"> Back </button>
+            </div>
+
+            <div id="nextButton" style="display:inline-block;">
+                <button id="next" class="navButton" value="next" onclick="moveTo(this.value)"> Next </button>
+            </div>
+
+        </div>
+
+        <div id="questionNavigator">
+            <div> <label id="timeLeft"> Time left: </label> <div id='timer'></div> </div>
+            <button id="q0" class="qButton" value="0" style="left:15%; top:19%" onclick="moveTo(this.value)">01</button>
+            <button id="q1" class="qButton" value="1" style="left:40%; top:19%" onclick="moveTo(this.value)">02</button>
+            <button id="q2" class="qButton" value="2" style="left:65%; top:19%" onclick="moveTo(this.value)">03</button>
+            <button id="q3" class="qButton" value="3" style="left:15%; top:39%" onclick="moveTo(this.value)">04</button>
+            <button id="q4" class="qButton" value="4" style="left:40%; top:39%" onclick="moveTo(this.value)">05</button>
+            <button id="q5" class="qButton" value="5" style="left:65%; top:39%" onclick="moveTo(this.value)">06</button>
+            <button id="q6" class="qButton" value="6" style="left:15%; top:59%" onclick="moveTo(this.value)">07</button>
+            <button id="q7" class="qButton" value="7" style="left:40%; top:59%" onclick="moveTo(this.value)">08</button>
+            <button id="q8" class="qButton" value="8" style="left:65%; top:59%" onclick="moveTo(this.value)">09</button>
+            <button id="q9" class="qButton" value="9" style="left:40%; top:79%" onclick="moveTo(this.value)">10</button>
+        </div>
+        
+        <script src="problem.js"></script>
+        <script src="test.js"></script>
+        <script src="main.js"></script>
+        
+        
+    </div>
+</body>
+
+</html>

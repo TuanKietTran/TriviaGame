@@ -1,0 +1,318 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Page */
+.contain {
+    max-width: 1300px;
+    margin: auto;
+    background: #F5EEF8;
+    padding: 10px;
+}
+
+/*----------*/
+#QuizFrame {
+    position: absolute;
+    left: 70px;
+    top: 400px;
+}
+
+#container {
+    width: 800px;
+    height: 400px;
+    background-color: #82E0AA;
+    left: 50px;
+    top: 500px;
+    z-index: 1000;
+    margin-top: 40px;
+    border: 5px pink solid;
+    border-radius: 10px;
+    display: block;
+}
+
+#questionNavigator {
+    width: 350px;
+    height: 400px;
+    background-color: #06F4C5;
+    position: absolute;
+    right: 150px;
+    top: 275px;
+    z-index: 1000;
+    border: 5px pink solid;
+    border-radius: 10px;
+}
+
+#question {
+    font-size: 23px;
+    font-weight: 500;
+    margin: 0 30px 20px 30px;
+    text-align: justify;
+}
+
+label {
+    font-size: 20px;
+}
+
+/*---------------*/
+.qButton {
+    background-color: #273746;
+    border: 2px solid black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 50%;
+    position: absolute;
+    font-weight: bolder;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.qButton:hover {
+    opacity: 1
+}
+
+.aw{
+    margin-left:30px;
+    margin-bottom:10px;
+}
+
+/*-----------*/
+
+#backButton{
+    width:150px;
+    margin-left:200px;
+    margin-top:100px;
+}
+
+#nextButton{
+    width:150px;
+    margin-left:90px;
+    margin-top:100px;
+}
+
+#back {
+    border-radius:4px;
+    background-color:#40D510;
+    border:none;
+    color:white;
+    text-align:center;
+    font-size:20px;
+    padding:10px;
+    width:150px;    
+    opacity:0.6;
+    transition:0.1s;
+}
+
+#next{
+
+    border-radius:4px;
+    background-color:#40D510;
+    border:none;
+    color:white;
+    text-align:center;
+    font-size:20px;
+    padding:10px;
+    width:150px;
+    opacity:0.6;
+    transition:0.1s;
+}
+
+.navButton:hover {opacity: 1}
+
+/*------------*/
+
+.aButton {
+    border-radius: 4px;
+    background-color: #01BBFF;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px 0px 10px 30px;
+    bottom: 20px;
+    opacity: 0.6;
+    transition: 0.1s;
+}
+
+.aButton:hover {
+    opacity: 1
+}
+
+
+/*-------------*/
+
+.menuBar {
+    overflow: hidden;
+    background-color: #2E4053;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.menuBar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropButton {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.menuBar a:hover,
+.dropdown:hover .dropButton {
+    background-color: red;
+}
+
+.dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: #EC7063;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdownContent a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdownContent a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdownContent {
+    display: block;
+}
+
+
+/*  ------------------------  */
+
+
+#mainContain {
+    background-color: rgb(243, 222, 222);
+    border: 3px solid orange;
+    border-radius: 15px;
+    margin: 50px;
+    height: 200px;
+    position: relative;
+}
+
+#font {
+    color: red;
+    font-size: 20px;
+    padding-left: 5px;
+    margin: 5px;
+    width: 150px;
+    float: left;
+}
+
+#link {
+    border: 2px solid #002200;
+    border-radius: 5px;
+    width: 125px;
+    height: 18px;
+    margin-left: 500px;
+    padding: 1px;
+    margin-top: 5px;
+    background-color: #CCFFFF;
+}
+
+.rank {
+    color: #993366;
+}
+
+#text {
+    text-align: center;
+    color: #770000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+a.rank:hover {
+    color: orange;
+}
+
+#scoreBoard {
+    border: 2px solid #999966;
+    border-radius: 15px;
+    margin: 0px auto;
+    width: 150px;
+    height: 50px;
+    background-color: white;
+}
+
+#time {
+    display: block;
+    font-size: 20px;
+    width: 300px;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    float: left;
+}
+
+.timeResult {
+    display: block;
+    font-size: 20px;
+    width: 300px;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    float: left;
+}
+
+#timeResult {
+    margin-left: 10px;
+    width: 80px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 5px;
+    float: left;
+}
+
+/*---------------------*/
+
+
+#timer {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:30px;
+	margin-left: 120px;
+    margin-top:25px;
+	text-align: center;
+    width: 110px;
+    height: 50px;
+	float: left;
+    background-color:#06F4C5;
+}
+
+#timer :disabled {
+    visibility: hidden;
+}
+#timeLeft{
+    margin-left:-95px;
+}
+
