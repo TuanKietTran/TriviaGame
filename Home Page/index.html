@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:800|Tangerine|Inconsolata|Droid+Sans|Lato" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Tick Quiz</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">TickQuiz</div>
+        <nav id="navigation" class="inactive">
+            <ul>
+                <li><a href="/test/">Test</a></li>
+                <li><a href="/leaderboard/">Leaderboard</a></li>
+                <li><a href="/your-performance/">Your Performance</a></li>
+                <li><a href="/about/">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="toggle" id="push">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+    </header>
+    
+    
+    <section class="container">
+        <img src="unsplash1.jpg" alt="Studying">
+        <div class="box">
+            <h1 class="heading">TickQuiz</h1>
+            <hr class="border-grey" style="margin:auto;width:40%">
+            <p>Stay Curious, Push Boundaries</p>   
+        </div>
+    </section>
+    
+    <section class="about">
+        <div class="contentBx">
+            <h2 class="heading-about-us">About us</h2>
+            <p class="content-about">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci dui, porttitor ut elit dapibus, dictum ultrices ex. Vivamus commodo eu turpis in mattis. Sed lacus eros, gravida in tristique non, maximus quis tortor. Fusce euismod nunc sit amet velit consectetur, in sodales metus viverra. Nunc porta ligula sit amet orci tincidunt tempus. Mauris turpis nulla, maximus quis mi tristique, sollicitudin ultrices dui. Morbi libero nunc, egestas sit amet dapibus quis, consequat et ante. Aenean luctus lacus posuere leo vestibulum, eget feugiat odio finibus. Quisque lobortis eleifend tristique. Donec in nisl ut velit varius tempus. Proin sodales magna nec venenatis rutrum. In rutrum volutpat nunc rutrum bibendum. Etiam molestie ante euismod nibh scelerisque gravida. Vestibulum eu odio vitae metus vulputate lacinia nec vel massa.<br><br>Proin vel mollis ligula, vel malesuada mi. Maecenas et urna sit amet mauris lacinia ornare non ac urna. Integer porttitor ante risus, sit amet fringilla odio fermentum et. Morbi ut massa est. Nam elementum felis non diam ullamcorper, ac tincidunt leo rutrum. Nam iaculis at elit quis porta. Nam in viverra arcu, non sagittis nisl. Vivamus quam nulla, porta ut elementum convallis, finibus id felis. Sed blandit laoreet posuere.
+            </p>
+        </div>
+        <div class="imgBx"></div>
+    </section>
+
+
+
+    <section class="section-follow">
+        <h3 class="follow-us">Follow us on</h3>
+        <div class="social-media">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter-square"></i>
+        </div>
+    </section>
+
+
+    <script>
+        document.getElementById('push').addEventListener("click", function(){
+            console.log('clicked');
+            var x = document.getElementById("navigation");
+            if (x.className === "inactive") {
+                x.className = "active";
+            } else {
+                x.className = "inactive";
+            }
+        });
+        
+    </script>
+</body>
+</html>
