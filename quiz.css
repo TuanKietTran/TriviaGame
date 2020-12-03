@@ -1,163 +1,317 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-image: url('geography.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
 }
+
+
+@font-face{
+    font-family: roboto;
+    src: url("RobotoSlab-VariableFont_wght.ttf");
+    font-weight: bold;
+}
+{
+    box-sizing: border-box;
+}
+
 /* Page */
 .contain {
     max-width: 1300px;
     margin: auto;
-    background: #F5EEF8;
-    padding: 10px;
+    background-color: none; 
 }
 
+.header {
+    padding:5px;
+    text-align: left;
+    background: none;
+    color: white;
+    font-size: 30px;
+    box-sizing: border-box;
+}
+
+#tickQuiz{
+    position:absolute;
+    top:30px;
+    left:100px;
+    text-decoration:none;
+    color:#0E060D;
+}
+
+#subject{
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+
 /*----------*/
-#QuizFrame {
-    position: absolute;
-    left: 70px;
-    top: 400px;
+
+#subject{
+    font-weight: bolder;
+    font-family:roboto;
+    font-size: 64px;
+    color:white;
 }
 
 #container {
-    width: 800px;
+    width: 900px;
     height: 400px;
-    background-color: #82E0AA;
-    left: 50px;
-    top: 500px;
-    z-index: 1000;
-    margin-top: 40px;
-    border: 5px pink solid;
-    border-radius: 10px;
+    background: rgba(195, 246, 244, 0.75);
+    z-index: 1;
+    border-radius: 40px;
+    display: inline-block;
+}
+
+#userName{
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: #F8F406;
+    font-size: 48px;
+    margin-bottom: 5px;
+    font-family: roboto;
     display: block;
+    position: relative;
+    margin-top: 20px;
 }
 
 #questionNavigator {
     width: 350px;
     height: 400px;
-    background-color: #06F4C5;
+    background: rgba(195, 246, 244, 0.6);  
+    border-radius: 40px;
+    display: inline-block;
     position: absolute;
-    right: 150px;
-    top: 275px;
-    z-index: 1000;
-    border: 5px pink solid;
-    border-radius: 10px;
-}
+    margin-left: 5%;
+}   
 
 #question {
-    font-size: 23px;
-    font-weight: 500;
-    margin: 0 30px 20px 30px;
+    color: black;
+    font-size: 24px;
+    margin-left: 30px;  
+    width: 100%;
     text-align: justify;
+    display: block;
+}
+
+#questionNum{
+    margin-left:20px;
+    color:#0D005B;
+    font-size:28px;
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
 }
 
 label {
     font-size: 20px;
 }
 
-/*---------------*/
-.qButton {
-    background-color: #273746;
-    border: 2px solid black;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-size: 16px;
-    margin: 4px 2px;
-    border-radius: 50%;
-    position: absolute;
-    font-weight: bolder;
-    opacity: 0.7;
-    transition: 0.3s;
-}
 
-.qButton:hover {
-    opacity: 1
-}
-
-.aw{
-    margin-left:30px;
-    margin-bottom:10px;
-}
-
-/*-----------*/
+/*-----------Next- Back button---------*/
 
 #backButton{
     width:150px;
-    margin-left:200px;
-    margin-top:100px;
+    margin-left: 35%;
+    margin-top: 10%;
 }
 
 #nextButton{
     width:150px;
-    margin-left:90px;
-    margin-top:100px;
+    margin-left: 10%;
+    margin-top: 10%;
 }
 
 #back {
-    border-radius:4px;
-    background-color:#40D510;
-    border:none;
-    color:white;
+    border-radius:20px;
+    background-color: rgba(12, 216, 240, 0.75);
+    border:1px solid;
+    font-weight: bold;
     text-align:center;
     font-size:20px;
     padding:10px;
-    width:150px;    
-    opacity:0.6;
-    transition:0.1s;
+    width:80%;    
 }
+#back:hover {background-color: #1F94A0}
 
 #next{
-
-    border-radius:4px;
-    background-color:#40D510;
-    border:none;
-    color:white;
+    border-radius:20px;
+    background-color: rgba(12, 216, 240);
+    border:1px solid;
+    font-weight: bold;
     text-align:center;
     font-size:20px;
     padding:10px;
-    width:150px;
-    opacity:0.6;
-    transition:0.1s;
+    width:80%;   
 }
 
-.navButton:hover {opacity: 1}
+#next:hover {background-color: #1F94A0}
 
-/*------------*/
+/*---------4 anwser buttons--------*/
 
 .aButton {
-    border-radius: 4px;
-    background-color: #01BBFF;
-    border: none;
-    color: white;
+    border-radius: 40px;
+    background-color: rgba(233, 230, 239, 0.5);
+    color: black;
     text-align: center;
-    font-size: 20px;
-    padding: 10px;
-    width: 150px;
-    margin: 10px 0px 10px 30px;
-    bottom: 20px;
-    opacity: 0.6;
-    transition: 0.1s;
+    font-size: 24px;
+    font-weight: bold;
+    width: 180px;
+    height:70px;
+    margin-top: 30px;
+    display: inline-block;
 }
 
 .aButton:hover {
-    opacity: 1
+    background-color: #07A6F0 !important;
+}
+
+/*------------Question navigator button--------*/
+#answerContainer{
+    position: relative;
+    left: 10%;
+}
+
+.qButton {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    margin: 4px 2px;
+    border: 1px solid black;
+    border-radius: 50%;
+    position: absolute;
+    font-weight: bolder;
+    transition: 0.25s;
+}
+
+.qButton:hover {
+    background-color: #e0aaff;
 }
 
 
-/*-------------*/
+/* ------------Responsive--------------- */
 
+@media screen and (max-width: 800px) {
+    .menuBar a:not(:first-child), .dropdown .dropButton {
+        display: none;
+    }
+    .menuBar a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .menuBar.responsive {position: relative;}
+    .menuBar.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: black;
+        z-index: 1;
+    }
+    .menuBar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+        color: black;
+        z-index: 1;
+    }
+    .menuBar.responsive .dropdown {float: none;}
+    .menuBar.responsive .dropdownContent {position: relative;}
+    .menuBar.responsive .dropdown .dropButton {
+        display: block;
+        width: 100%;
+        text-align: left;
+        z-index: 1;
+    }
+}
+
+@media screen and (max-width: 900px){
+
+    #container { 
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        background-color: none;
+        display: block;
+        position: relative;
+    }
+    #button1{margin-left: 20px;}
+    #button3{margin-left: 20px;}
+    .button01 {display: block;}
+    .button23 { display: block;}
+    .aButton { display: inline-block;}
+
+    #question{
+        width: 90%;
+        margin-left: 5%;
+        padding-right: 5%;
+    }
+    #subject{
+        font-size: 12vw;
+    }
+
+    #answerContainer {align-content: center;}
+
+    .nbButton{ 
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    #backButton{
+        display: inline-block;
+        margin: auto;
+    }
+    #nextButton{
+        display: inline-block;
+        margin: auto;
+    }
+
+    #getName{ width: 70%;}
+
+    #nameInput{
+        width: 50%;
+        margin-left: 5%;
+        height: auto;
+    }
+
+    #questionNavigator{
+        position: relative;
+        margin-left: 0;
+        margin-top: 20px;
+        width: 100%;
+        height:350px;
+    }
+
+    #myButton {margin-top: 10%; margin-bottom: 10%;}
+}
+/* -------------------- */
+
+
+/*-------Menu bar------*/
 .menuBar {
     overflow: hidden;
-    background-color: #2E4053;
-    border: 2px solid black;
-    border-radius: 10px;
+    background-color: none;
+    font-family: roboto;
+    display: inline-block;
+    float: right;
+    margin-top: 10px;
+    z-index: 5;
 }
 
 .menuBar a {
+    display: block;
     float: left;
-    font-size: 16px;
-    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    z-index: 5;
 }
 
 .dropdown {
@@ -166,53 +320,67 @@ label {
 }
 
 .dropdown .dropButton {
-    font-size: 16px;
+    font-size: 20px;
     border: none;
+    font-weight: bold;
     outline: none;
-    color: white;
+    color: #0E060D;
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
+    z-index: 5;
 }
 
 .menuBar a:hover,
 .dropdown:hover .dropButton {
-    background-color: red;
+    background-color: rgba(195, 246, 244, 0.9);
+}
+
+.dropButton:focus{
+    background-color: rgba(195, 246, 244, 0.9);
 }
 
 .dropdownContent {
     display: none;
     position: absolute;
-    background-color: #EC7063;
+    font-weight: bold;
+    background-color: rgba(256, 256, 256, 0.9);
     min-width: 160px;
-    z-index: 1;
+    z-index: 5;
+    overflow: auto;
 }
 
 .dropdownContent a {
     float: none;
     color: black;
+    font-weight: bold;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
+    z-index: 5;
 }
 
 .dropdownContent a:hover {
-    background-color: #ddd;
+    background-color: rgba(195, 246, 244, 0.9);
 }
 
-.dropdown:hover .dropdownContent {
-    display: block;
+.menuBar a.active {
+    background-color: none;
+    color: #0E060D;
 }
 
-
+.menuBar .icon {
+    display: none;
+}
+.show {display: block;}
 /*  ------------------------  */
 
 
 #mainContain {
     background-color: rgb(243, 222, 222);
-    border: 3px solid orange;
+    border: 1px solid orange;
     border-radius: 15px;
     margin: 50px;
     height: 200px;
@@ -229,14 +397,15 @@ label {
 }
 
 #link {
-    border: 2px solid #002200;
+    border: 1px solid #002200;
     border-radius: 5px;
     width: 125px;
-    height: 18px;
+    height: 20px;
     margin-left: 500px;
     padding: 1px;
     margin-top: 5px;
     background-color: #CCFFFF;
+    text-align: center;
 }
 
 .rank {
@@ -259,8 +428,10 @@ a.rank:hover {
     border-radius: 15px;
     margin: 0px auto;
     width: 150px;
-    height: 50px;
-    background-color: white;
+    height: 60px;
+    background-color: #39E86F;
+    text-align: center;
+    font-size: 45px;
 }
 
 #time {
@@ -269,18 +440,18 @@ a.rank:hover {
     width: 300px;
     height: 30px;
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     left: 0;
     float: left;
 }
 
 .timeResult {
     display: block;
-    font-size: 20px;
+    font-size: 22px;
     width: 300px;
     height: 30px;
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     left: 0;
     float: left;
 }
@@ -288,9 +459,10 @@ a.rank:hover {
 #timeResult {
     margin-left: 10px;
     width: 80px;
-    height: 25px;
+    height: 30px;
     border: 1px solid black;
-    border-radius: 5px;
+    text-align: center;
+    border-radius: 4px;
     float: left;
 }
 
@@ -298,21 +470,140 @@ a.rank:hover {
 
 
 #timer {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size:30px;
-	margin-left: 120px;
-    margin-top:25px;
-	text-align: center;
+    font-size:30px;     
+    font-weight: bold;
     width: 110px;
     height: 50px;
-	float: left;
-    background-color:#06F4C5;
+    margin-left: 10px;
+    display: block;
 }
 
-#timer :disabled {
-    visibility: hidden;
+.timeLeft{
+    align-content: center;
+    margin-left: 37.5%;
+    margin-top: 10px;
+    display: block;
 }
+
 #timeLeft{
-    margin-left:-95px;
+    margin:auto;
+    font-weight: 500;
+    display: block;
+    font-size: 25px;
 }
 
+
+
+/* -------Modal box------- */
+
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+
+.modalContent {
+    background-color: rgba(12, 216, 240, 0.5);
+    margin: 15% auto; 
+    padding: 20px;
+    border-radius: 20px;
+    width: 50%; 
+    height: 150px;
+    z-index: 10;
+}
+
+#enterName{
+    font-family: roboto;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.close {
+    color: #FA0838;
+    font-size: 30px;
+    font-weight: bold;
+    border: 1px solid;
+    border-radius: 5px; 
+    font-family: roboto;
+}
+
+.close:hover,
+.close:focus {
+    color: green;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#myButton{
+    font-family: roboto;
+    border-radius:40px;
+    background-color:#59BFE3;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: white;
+    text-align:center;
+    font-size:50px;
+    margin-left: 30%;
+    padding:10px;
+    width:300px;    
+}
+#myButton:hover {background-color: #5E6CCD;}
+
+
+#nameInput{
+    border: 1px solid;
+    border-radius: 10px;
+    margin-top: 5%;
+    margin-left: 20%;
+    font-size: 24px;
+    width: 50%;
+    height: 30px;
+}
+
+#getName{
+    margin-top: 15%;
+}
+
+/* ---------Animation--------- */
+
+#incorrect, #good {
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+#correctImg{
+    margin-left:35%; 
+    margin-top: 10%;
+    padding: 30px;
+    border-radius: 20px;
+    width: 250px; 
+    height: 280px;
+    z-index: 10;
+}
+
+#incorrectImg{
+    margin-left:35%; 
+    margin-top: 10%;
+    padding: 30px;
+    border-radius: 20px;
+    width: 280px; 
+    height: 240px;
+    z-index: 10;
+}

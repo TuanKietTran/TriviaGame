@@ -5,6 +5,7 @@ let Problem = function(question, choices, answer) {
     this.done = false;
     this.keyId = "button";
     this.answerId = "button";
+    this.isTrue = null;
 
     this.isCorrectAnswer = function(choice) {
         return this.answer === choice;
@@ -17,5 +18,4 @@ let Problem = function(question, choices, answer) {
                 this.keyId = "button" + i;
         }
     }
-
 }

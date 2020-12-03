@@ -4,7 +4,10 @@ let Quiz = function(problems) {
     this.problems = problems;
     this.currentProblem = problems[0];
     this.index = 0;
+    this.previousIndex = 0;
+    this.previousProblem = problems[0];
     this.questionAnswered = 0;
+    this.userName = null;
 
     this.show = function() {
         this.currentProblem.getKeyId();
@@ -13,6 +16,31 @@ let Quiz = function(problems) {
 
         if (this.questionAnswered < problems.length)
         {
+            if (!this.previousProblem.done){
+                var element = document.getElementById("q" + this.previousIndex);
+                element.style.border = "1px solid";
+                element.style.backgroundColor = "white";
+            }
+            else{
+                if (this.previousProblem.isTrue){
+                    var element = document.getElementById("q" + this.previousIndex);
+                    element.style.border = "1px solid";
+                    element.style.backgroundColor = "#069E2D";
+                }
+                else{
+                    var element = document.getElementById("q" + this.previousIndex);
+                    element.style.border = "1px solid";
+                    element.style.backgroundColor = "#ED1313";
+                }
+            }
+
+            var current = document.getElementById("q" + this.index);
+            current.style.border = "3px solid";
+            current.style.backgroundColor = "yellow";
+
+            this.previousIndex = this.index;
+            this.previousProblem = this.currentProblem;
+
             if (this.index == 0)
                 document.getElementById("back").style.display = "none";
 
@@ -44,11 +72,11 @@ let Quiz = function(problems) {
                     document.getElementById("button" + i).disabled = true;
 
                 if (this.currentProblem.keyId == this.currentProblem.answerId)
-                    document.getElementById(this.currentProblem.keyId).style.backgroundColor = "yellow";
+                    document.getElementById(this.currentProblem.keyId).style.backgroundColor = "#069E2D";
                 else
                 {
-                    document.getElementById(this.currentProblem.keyId).style.backgroundColor = "yellow";
-                    document.getElementById(this.currentProblem.answerId).style.backgroundColor = "red";
+                    document.getElementById(this.currentProblem.keyId).style.backgroundColor = "#069E2D";
+                    document.getElementById(this.currentProblem.answerId).style.backgroundColor = "#ED1313";
                 }
             }
         }
@@ -66,30 +94,35 @@ let Quiz = function(problems) {
             if (this.currentProblem.isCorrectAnswer(answer)) {
                 this.score++;
 
-                document.getElementById(id).style.backgroundColor = 'yellow';
+                document.getElementById(id).style.backgroundColor = '#069E2D';
                 this.currentProblem.done = true;
                 this.questionAnswered++;
                 this.currentProblem.answerId = id;
-                document.getElementById("q" + this.index).style.backgroundColor = "green";
+                this.currentProblem.isTrue = true;
+
+                document.getElementById("q" + this.index).style.backgroundColor = "#069E2D";
                 self.disableAllButton(true);
+
                 if (this.questionAnswered == (this.problems.length)){
-                    setTimeout(showConsole(), 1000); 
-                    showStats();
+                    clearInterval(idVar);
+                    setTimeout(function(){showStats();}, 500);
                 }
             } 
             else {
                 this.currentProblem.getKeyId();
-                document.getElementById(id).style.backgroundColor = 'red';
-                document.getElementById(this.currentProblem.keyId).style.backgroundColor = "yellow";
-                document.getElementById("q" + this.index).style.backgroundColor = "red";
+                document.getElementById(id).style.backgroundColor = '#ED1313';
+                document.getElementById(this.currentProblem.keyId).style.backgroundColor = "#069E2D";
+                document.getElementById("q" + this.index).style.backgroundColor = "#ED1313";
 
                 this.currentProblem.answerId = id;
                 this.currentProblem.done = true;
                 this.questionAnswered++;
+                this.currentProblem.isTrue = false;
                 self.disableAllButton(true);
+    
                 if (this.questionAnswered == (this.problems.length)){
-                    setTimeout(showConsole(), 1000); 
-                    showStats();
+                    clearInterval(idVar);
+                    setTimeout(function(){showStats();}, 500);
                 }
             }
         }
@@ -107,10 +140,9 @@ let Quiz = function(problems) {
         self.disableAllButton(false);
         for (let i = 0; i < this.currentProblem.choices.length; i++) {
             var tag = 'button' + i;
-            document.getElementById(tag).style.backgroundColor = '#01BBFF';
+            document.getElementById(tag).style.backgroundColor = 'rgba(233, 230, 239, 0.3)';
         }
     }
-
     self = this;
 }
 
